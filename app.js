@@ -1,7 +1,9 @@
 const express = require('express');
 const app = express();
 app.use(express.static('public'));
-
+// prueba
+const publicPath= path.resolved(__dirname, 'public');
+app.use(express.static(publicPath));
 
 app.listen(3000, ()=>{
     console.log('Servidor funcionando');
